@@ -17,6 +17,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+        <script src="scripts/main.js" defer type="module"></script>
+    
     </head>
     <body>
         <div id="room" class="content">
@@ -25,7 +27,7 @@
                     <img src="assets/logo.svg" alt="Rocket.Q logo" />
                 </a>
                 <div class="buttons">
-                    <div class="button outlined">
+                    <div class="button outlined" id="room-id" data-id="323243">
                         #323243
                         <img src="assets/copy.svg" alt="Copiar número da sala">
                     </div>
@@ -63,11 +65,33 @@
                                     </div>
                                 </div>
                                 <div class="actions">
-                                    <a href="" class="check">
+                                    <a href="#" class="check" data-id="2">
                                         <img src="assets/check.svg" alt="Marcar como lida">
                                         Marcar como lida
                                     </a>
-                                    <a href="" class="delete">
+                                    <a href="#" class="delete" data-id="2">
+                                        <img src="assets/trash.svg" alt="Excluir">
+                                        Excluir
+                                    </a>
+                                </div>
+                            </div>
+
+                        <div class="questions">
+                            <div class="question-wrapper">
+                                <div class="question-content">
+                                    <div class="user">
+                                        <img src="assets/user.svg" alt="user">
+                                    </div>
+                                    <div class="question">
+                                        <p>O que é javascript?</p>
+                                    </div>
+                                </div>
+                                <div class="actions">
+                                    <a href="#" class="check" data-id="3">
+                                        <img src="assets/check.svg" alt="Marcar como lida">
+                                        Marcar como lida
+                                    </a>
+                                    <a href="#" class="delete" data-id="3">
                                         <img src="assets/trash.svg" alt="Excluir">
                                         Excluir
                                     </a>
@@ -75,46 +99,22 @@
                             </div>
 
                             <div class="questions">
-                                <div class="question-wrapper">
+                                <div class="question-wrapper read">
                                     <div class="question-content">
                                         <div class="user">
                                             <img src="assets/user.svg" alt="user">
                                         </div>
                                         <div class="question">
-                                            <p>O que é javascript?</p>
+                                            <p>O que é script?</p>
                                         </div>
                                     </div>
                                     <div class="actions">
-                                        <a href="" class="check">
-                                            <img src="assets/check.svg" alt="Marcar como lida">
-                                            Marcar como lida
-                                        </a>
-                                        <a href="" class="delete">
+                                        <a href="#" class="delete" data-id="1">
                                             <img src="assets/trash.svg" alt="Excluir">
                                             Excluir
                                         </a>
                                     </div>
-                                </div>
-
-                                <div class="questions">
-                                    <div class="question-wrapper read">
-                                        <div class="question-content">
-                                            <div class="user">
-                                                <img src="assets/user.svg" alt="user">
-                                            </div>
-                                            <div class="question">
-                                                <p>O que é script?</p>
-                                            </div>
-                                        </div>
-                                        <div class="actions">
-                                            <a href="" class="delete">
-                                                <img src="assets/trash.svg" alt="Excluir">
-                                                Excluir
-                                            </a>
-                                        </div>
-                                </div>
-
-
+                            </div>
                         </div>
                     </section>
                 </section>
@@ -126,15 +126,17 @@
             <div class="modal">
                 <h2>Excluir pergunta</h2>
                 <p>Tem certeza que você deseja excluir essa pergunta?</p>
-                <form action="">
-                    <label for="password" class="sr-only">Digite sua senha admin</label>
+
+                <form action="#" method="POST">
+                    <label class="sr-only" for="password">Digite sua senha admin</label>
                     <input type="password" id="password" name="password" placeholder="Digite sua senha">
 
                     <div class="buttons">
-                        <div class="button grey">Cancelar</div>
+                        <div class="button grey cancel">Cancelar</div>
                         <button class="red">Sim, excluir</button>
                     </div>
                 </form>
+
             </div>
         </div>
     </body>
